@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolução de Atendimento</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <img src="./assets/logo.svg" alt="logotipo" />
+      <h1 id="nomeClinica">Clínica</h1>
+    </header>
+
+    <div class="filtros">
+      <select id="terapeuta">
+        <option value="">Selecione o terapeuta</option>
+      </select>
+
+      <select id="paciente">
+        <option value="">Selecione o paciente</option>
+      </select>
+
+      <input type="date" id="dataInicio">
+      <input type="date" id="dataFim">
+
+      <select id="tipoAssinatura">
+        <option value="individual">Assinatura Individual</option>
+        <option value="documento">Assinatura no Documento</option>
+      </select>
+
+      <button id="consultar">Consultar</button>
+      <button id="baixarPdf">Baixar PDF</button>
+    </div>
+
+    <div id="loading" class="loading">Carregando dados...</div>
+
+    <div id="areaRelatorio">
+
+      <div class="info">
+        <h2>EVOLUÇÃO DE ATENDIMENTO</h2>
+        <p><strong>Paciente:</strong> <span id="infoPaciente"></span></p>
+        <p><strong>Nascimento:</strong> <span id="infoNascimento"></span></p>
+        <p><strong>Diagnóstico:</strong> <span id="infoDiagnostico"></span></p>
+        <p><strong>Responsável 1:</strong> <span id="infoResponsavel1"></span></p>
+        <p><strong>Responsável 2:</strong> <span id="infoResponsavel2"></span></p>
+        <p><strong>Terapeuta:</strong> <span id="infoTerapeuta"></span></p>
+        <p><strong>Setor:</strong> <span id="infoSetor"></span></p>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Evolução</th>
+            <th id="colunaAssinatura">Assinatura</th>
+          </tr>
+        </thead>
+        <tbody id="tabelaBody"></tbody>
+      </table>
+
+      <div id="assinaturaDocumento" class="assinatura-doc">
+        <div class="linha-assinatura"></div>
+        <p id="nomeResponsavel"></p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

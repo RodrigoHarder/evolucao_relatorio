@@ -1,0 +1,168 @@
+:root {
+  --primary: #1f2a44;
+  --accent: #224898;
+  --accent-dark: #1b3a7a;
+  --light: #f3f5f9;
+  --gray: #e9edf3;
+  --text: #2d2d2d;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--light);
+  margin: 0;
+  padding: 30px;
+  color: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+header {
+  margin-bottom: 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.filtros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+select,
+input {
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 30px;
+  border: 1px solid var(--gray);
+  background: var(--gray);
+  outline: none;
+  transition: 0.2s;
+}
+
+select:focus,
+input:focus {
+  border-color: var(--accent);
+  background: #fff;
+}
+
+button {
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#baixarPdf, #consultar {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: white;
+}
+
+#baixarPdf:hover, #consultar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34,72,152,0.3);
+}
+
+#areaRelatorio {
+  display: none;
+  margin-top: 20px;
+}
+
+.info {
+  background: var(--gray);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.info p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+thead th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px;
+  color: #666;
+}
+
+tbody tr {
+  background: var(--gray);
+  border-radius: 10px;
+}
+
+tbody td {
+  padding: 12px;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+tbody tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 130px;
+  font-weight: 500;
+}
+
+tbody tr td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.assinatura {
+  width: 150px;
+}
+
+.assinatura-doc {
+  display: none;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.linha-assinatura {
+  width: 280px;
+  border-bottom: 1px solid #333;
+  margin: 0 auto 8px auto;
+}
+
+.loading {
+  text-align: center;
+  padding: 15px;
+}
