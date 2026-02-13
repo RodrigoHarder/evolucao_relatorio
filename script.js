@@ -1,5 +1,4 @@
-const API_URL = "https://backend-api-rz1l.onrender.com";
-
+const API_URL = "https://backend-api-rz1l.onrender.com/api"
 let dados = [];
 
 const loading = document.getElementById("loading");
